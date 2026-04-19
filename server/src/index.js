@@ -5,6 +5,8 @@ import Database from 'better-sqlite3'
 import { mkdir } from 'fs/promises'
 import path from 'path'
 
+import authRoutes from './routes/auth.js'
+
 dotenv.config()
 
 const app = express()
@@ -34,6 +36,8 @@ db.exec(`
     FOREIGN KEY (user_id) REFERENCES users(id)
   );
 `)
+
+authRoutes(app, db)
 
 await mkdir(process.env.UPLOAD_DIR || 'uploads', { recursive: true })
 await mkdir(process.env.PAGES_DIR || 'pages', { recursive: true })
