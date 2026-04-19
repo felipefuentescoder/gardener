@@ -6,6 +6,7 @@ import { mkdir } from 'fs/promises'
 import path from 'path'
 
 import authRoutes from './routes/auth.js'
+import pageRoutes from './routes/pages.js'
 
 dotenv.config()
 
@@ -38,6 +39,7 @@ db.exec(`
 `)
 
 authRoutes(app, db)
+pageRoutes(app, db)
 
 await mkdir(process.env.UPLOAD_DIR || 'uploads', { recursive: true })
 await mkdir(process.env.PAGES_DIR || 'pages', { recursive: true })

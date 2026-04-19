@@ -128,3 +128,43 @@ header {
   height: 500px;
   border: none;
 }
+
+.export-section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2d5a27;
+  color: white;
+}
+
+.btn-secondary {
+  background: #666;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #234a1f;
+}
+
+.export-note {
+  color: #666;
+  font-size: 14px;
+}
